@@ -1,13 +1,13 @@
 Dockerize this app 
 
 1 . install dependecies for python app
-  pip3 install -r requirements.txt
+  ```pip3 install -r requirements.txt```
 
 2. to start the app
-     python3 app.py (note currently running on Port 80)
+    ``` python3 app.py (note currently running on Port 80)```
 
 once above steps completed you can able to access the app 
-curl http://localhost:80 or curl http://127.0.0.1:80 
+`curl http://localhost:80 or curl http://127.0.0.1:80 `
 
 you could see the response some thing like below 
 
