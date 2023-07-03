@@ -1,0 +1,25 @@
+name: Build and Push Docker Image
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t $DOCKER_USERNAME/V-python-app .
+          docker push $DOCKER_USERNAME/V-python-app
