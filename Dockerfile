@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt --no-cache
 
 # Copy the application code into the container
-COPY ./src /app/src
+COPY . .
 
 # Expose the port on which your application will run
 EXPOSE 8080
