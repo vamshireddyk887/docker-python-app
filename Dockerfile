@@ -12,7 +12,7 @@ RUN pip3 install -r requirements.txt --no-cache
 COPY . .
 
 # Expose the port on which your application will run
-EXPOSE 8087
+EXPOSE 80
 
 # Set the command to run your application
 CMD ["python", "app.py"]
