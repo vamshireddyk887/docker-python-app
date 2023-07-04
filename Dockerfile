@@ -6,10 +6,10 @@ WORKDIR /app
 
 # Copy the requirements file and install the dependencies
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt --no-cache
 
 # Copy the application code into the container
-COPY . .
+COPY ./src /app/src
 
 # Expose the port on which your application will run
 EXPOSE 8080
